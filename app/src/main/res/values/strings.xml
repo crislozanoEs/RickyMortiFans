@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RickyMortyFans</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">No data!</string>
+    <string name="error_title_default">Oops, something went wrong</string>
+    <string name="retry_button_text">Try again!</string>
+    <string name="details_character_item_title">Details:</string>
+    <string name="status_character_item_title">Status: %s</string>
+    <string name="species_character_item_title">Specie: %s</string>
+    <string name="gender_character_item_title">Gender: %s</string>
+    <string name="detail_char_status_label">Status:</string>
+    <string name="detail_char_specie_label">Specie:</string>
+    <string name="detail_char_origin_label">Origin:</string>
+    <string name="detail_char_location_label">Current location:</string>
+    <string name="detail_char_gender_label">Gender:</string>
+    <string name="detail_char_type_label">Type:</string>
+    <string name="error_no_id">"No information to load data"</string>
+    <string name="detail_title">Character details</string>
+    <string name="list_title">Characters list</string>
+    <string name="floating_action_button">floating action button</string>
+</resources>
