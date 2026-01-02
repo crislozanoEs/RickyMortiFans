@@ -35,11 +35,6 @@ class ListFragment : Fragment(), CharacterItemAdapter.OnItemClickListener {
 
         viewModel.loadData()
 
-        if(activity != null) {
-            (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            (activity as MainActivity).supportActionBar?.title = getString(R.string.list_title)
-        }
-
         binding.reloadList.setOnClickListener {
             viewModel.resetPage()
             (binding.list.adapter as CharacterItemAdapter).clearItems()
@@ -86,6 +81,14 @@ class ListFragment : Fragment(), CharacterItemAdapter.OnItemClickListener {
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(activity != null) {
+            (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            (activity as MainActivity).supportActionBar?.title = getString(R.string.list_title)
+        }
     }
 
     override fun onItemClick(item: Result) {

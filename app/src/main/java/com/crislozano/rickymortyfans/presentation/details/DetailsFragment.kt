@@ -48,10 +48,7 @@ class DetailsFragment : Fragment() {
                goBack()
             }
         }
-        if(activity != null) {
-            (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            (activity as MainActivity).supportActionBar?.title = getString(R.string.detail_title)
-        }
+
         viewModel.state.observe(viewLifecycleOwner) {
             when(it) {
                 is State.Loading -> {
@@ -86,6 +83,14 @@ class DetailsFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(activity != null) {
+            (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            (activity as MainActivity).supportActionBar?.title = getString(R.string.detail_title)
+        }
     }
 
     private fun goBack() {

@@ -48,6 +48,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
+    implementation(libs.androidx.fragment.testing)
+    implementation(libs.androidx.navigation.testing)
+    implementation(libs.androidx.espresso.contrib)
     // Testing
     testImplementation(libs.junit)
     testImplementation(libs.mockito)
